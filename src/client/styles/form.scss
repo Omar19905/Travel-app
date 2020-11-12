@@ -1,0 +1,81 @@
+.search {
+  width: 55%;
+  min-width: 540px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.06);
+
+
+  > * {
+    padding: 4px;
+    display: block;
+  }
+
+  label {
+    display: inline-block;
+    margin: 0 17%;
+    font-size: 1.5em;
+    color: #92817a;
+  }
+
+  h1 {
+    color: #92817a;
+
+  }
+
+}
+
+input {
+  padding: 5px 7px;
+  width: 65%;
+  line-height: 16px;
+  margin: 0 auto 25px auto;
+  border: none;
+  font-size: 1.5em;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.06);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+
+  }
+
+  &:hover {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+  }
+}
+
+input[type="submit"] {
+  padding: 13px 7px;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 45%;
+  line-height: 16px;
+  border: none;
+  background-color: #92817a;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    transform: scale(0.95);
+    transition: all 0.5s ease-out
+  }
+}
+
+.type {
+  background-color: #92817a;
+  color: white;
+  display: inline-block;
+  font-size: 1.7em;
+}
+
+@media (max-width: 540px) {
+  .search{
+    width: 93%;
+    min-width: 0;
+  }
+}

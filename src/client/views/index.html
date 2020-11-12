@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Travel Planner</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+<header>
+    <h1>Travel Planner</h1>
+</header>
+<div class="search">
+    <label for="destination">Destination:</label>
+    <input type="text" name="destination" id="destination">
+
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date">
+
+    <input id="submit" type="submit" value="Search">
+</div>
+
+<div hidden id="spinner"></div>
+
+<div hidden class="result">
+    <div class="data">
+        <h1 id="city" class="trip">Trip to: london</h1>
+    </div>
+
+    <div class="picture">
+        <img id="city-picture" src=""
+             alt="">
+    </div>
+    <h2 id="trip-date" class="">Arrival date: 20/10/2020</h2>
+    <h2 id="countdown">your trip in: 5 days</h2>
+
+    <div class="weather-data">
+
+        <h2 id="weather-description" class="weather">weather:</h2>
+        <img id="weather-icon" src="">
+
+        <h2 id="low"></h2>
+        <h2 id="high"></h2>
+
+    </div>
+
+
+    <input id="packing-button" type="submit" value="Packing list">
+</div>
+
+<div hidden class="packing">
+
+    <div class="content">
+        <h2>Packing list</h2>
+
+        <div class="entry">
+            <input id="packing-item" type="text">
+            <input id="packing-add" type="submit" value="Add">
+        </div>
+
+        <ul id="packing-list">
+
+        </ul>
+        <button id="close">close</button>
+    </div>
+
+</div>
+
+
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+</body>
+</html>
